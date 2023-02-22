@@ -1,0 +1,370 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+
+::selection{
+    color: #000;
+    background: white;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/starry-sky-purple-sky-astronomical-stars-5k-1920x1080-1022.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* top */
+.top{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    background: linear-gradient(rgba(0, 0, 0, 0.447),rgba(242, 234, 234, 0));
+}
+
+.top h2{
+    margin-left: 50px;
+    user-select: none;
+    font-size: 30px;
+
+}
+
+.top h2::after{
+    content: "WEB DEVELOPER";
+    color: #adabab;
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.top .nav ul{
+    float: right;
+}
+
+.top .nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+
+.top .nav .dis{
+    margin-right: 50px;
+}
+
+.top .nav ul li a{
+    color: #ffffff;
+    font-size: 16px;
+    padding: 7px 15px;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+a.active,a:hover{
+    background: #7f07ffa6;
+    transition: .5s;
+}
+
+/* mid */
+.mid{
+    flex: 5;
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mid .all{
+    background-color: #00000076;
+    padding: 0px 20px 20px 20px;
+}
+
+.intro-message   { 
+    text-align: center;
+    margin-top: 30px;
+}
+
+.mid form img{
+    height: 130px;
+    width: 130px;
+    border-radius: 200px;
+    box-shadow: 1px 1px 25px 3px #ffffff;
+    user-select: none;
+    margin-bottom: 25px;
+}   
+
+/*Big header*/
+.intro-message > h1 {
+    text-shadow: 2px 1px 2px #000;
+    font-size: 4.5em;
+    color: rgba(255, 255, 255, 0.961);
+    margin-bottom: 5px;
+}
+
+/*small header*/
+.intro-message > h3 {
+    color: white;
+    font-weight: 100;
+    font-size: 15.4px;
+    margin-top: 10px;
+    font-family: "Raleway", sans-serif !important;
+}
+
+.mid .content1{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.mid .content1 h1{
+    margin-top: 0px;
+    color: #ff6363;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.mid .content1 p {
+    font-size: 20px;
+    color: #d4d3d3;
+    padding-bottom: 20px;
+}
+
+.mid .content1 li{
+    color: #ffffff;
+}
+
+@media(max-width:1000px){
+    .intro-message > h1 {
+        text-shadow: 2px 1px 2px #000;
+        font-size: 2em;
+        color: rgba(255, 255, 255, 0.961);
+        margin-bottom: 10px;
+    }
+
+    .mid .content p {
+        font-size: 20px;
+        color: #e6e5e5;
+        width: 550px;
+        padding-bottom: 20px;
+    }
+    
+}
+
+@media(max-width:800px) {
+
+    .intro-message > h1 {
+        text-shadow: 2px 1px 2px #000;
+        font-size: 2em;
+        color: rgba(255, 255, 255, 0.961);
+        margin-bottom: 10px;
+    }
+
+    .mid .content h1{
+        margin-top: 30px;
+            color: #ff6363;
+            font-weight: bold;
+            font-size: 30px;
+            margin-bottom: 20px;
+    }
+    
+    .mid .content p {
+        font-size: 20px;
+        color: #e6e5e5;
+        width: 450px;
+        padding-bottom: 20px;
+    }
+}
+/*line*/
+hr.intro-divider {
+  border: 1px outset rgba(255, 255, 255, 0.2);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+  width: 100%;
+}
+
+/* bot */
+.bot{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    user-select: none;
+    text-align: center;
+  }
+  
+  .bot p{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin: 8px 0 16px;
+  }
+
+#galaxy {
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #03092b00;
+	-webkit-transition: background 0.8s ease-out;
+	-moz-transition: background 0.8s ease-out;
+	-o-transition: background 0.8s ease-out;
+	-ms-transition: background 0.8s ease-out;
+	transition: background 0.8s ease-out;
+}
+#galaxy,
+#galaxy .bg {
+	width: 100%;
+	height: 100%;
+}
+#galaxy * {
+	position: absolute;
+}
+#galaxy .bg.center {
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 200px;
+	margin: -100px 0 0 -200px;
+	opacity: 0.8;
+	-webkit-border-radius: 500px;
+	-moz-border-radius: 500px;
+	border-radius: 500px;
+}
+#galaxy [class^="stars"] {
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+}
+#galaxy .stars-back {
+	background: url('https://raw.githubusercontent.com/gurde/css3-animated-galaxy/master/img/back.png');
+	-webkit-animation: orbit-clock-wise 440s infinite linear;
+	-moz-animation: orbit-clock-wise 440s infinite linear;
+	-o-animation: orbit-clock-wise 440s infinite linear;
+	-ms-animation: orbit-clock-wise 440s infinite linear;
+	animation: orbit-clock-wise 440s infinite linear;
+}
+#galaxy .stars-middle {
+	background: url('https://raw.githubusercontent.com/gurde/css3-animated-galaxy/master/img/middle.png');
+	-webkit-animation: orbit-counter-clock-wise 360s infinite linear;
+	-moz-animation: orbit-counter-clock-wise 360s infinite linear;
+	-o-animation: orbit-counter-clock-wise 360s infinite linear;
+	-ms-animation: orbit-counter-clock-wise 360s infinite linear;
+	animation: orbit-counter-clock-wise 360s infinite linear;
+}
+#galaxy .stars-front {
+	background: url('https://raw.githubusercontent.com/gurde/css3-animated-galaxy/master/img/front.png');
+	-webkit-animation: orbit-clock-wise 160s infinite linear;
+	-moz-animation: orbit-clock-wise 160s infinite linear;
+	-o-animation: orbit-clock-wise 160s infinite linear;
+	-ms-animation: orbit-clock-wise 160s infinite linear;
+	animation: orbit-clock-wise 160s infinite linear;
+}
+@-webkit-keyframes orbit-clock-wise {
+	0% { opacity: 0.4; -webkit-transform: rotate(0deg); }
+	2% { opacity: 0.8; }
+	4% { opacity: 0.2; }
+	5% { opacity: 0.8; }
+	100% { opacity: 0.4; -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes orbit-counter-clock-wise {
+	from { -webkit-transform: rotate(360deg); } to { -webkit-transform: rotate(0deg); }
+}
+@-moz-keyframes orbit-clock-wise {
+	0% { opacity: 0.4; -moz-transform: rotate(0deg); }
+	2% { opacity: 0.8; }
+	4% { opacity: 0.2; }
+	5% { opacity: 0.8; }
+	100% { opacity: 0.4; -moz-transform: rotate(360deg); }
+}
+@-moz-keyframes orbit-counter-clock-wise {
+	from { -moz-transform: rotate(360deg); } to { -moz-transform: rotate(0deg); }
+}
+@-o-keyframes orbit-clock-wise {
+	0% { opacity: 0.4; -o-transform: rotate(0deg); }
+	2% { opacity: 0.8; }
+	4% { opacity: 0.2; }
+	5% { opacity: 0.8; }
+	100% { opacity: 0.4; -o-transform: rotate(360deg); }
+}
+@-o-keyframes orbit-counter-clock-wise {
+	from { -o-transform: rotate(360deg); } to { -o-transform: rotate(0deg); }
+}
+@-ms-keyframes orbit-clock-wise {
+	0% { opacity: 0.4; -ms-transform: rotate(0deg); }
+	2% { opacity: 0.8; }
+	4% { opacity: 0.2; }
+	5% { opacity: 0.8; }
+	100% { opacity: 0.4; -ms-transform: rotate(360deg); }
+}
+@-ms-keyframes orbit-counter-clock-wise {
+	from { -ms-transform: rotate(360deg); } to { -ms-transform: rotate(0deg); }
+}
+@keyframes orbit-clock-wise {
+	0% { opacity: 0.4; transform: rotate(0deg); }
+	2% { opacity: 0.8; }
+	4% { opacity: 0.2; }
+	5% { opacity: 0.8; }
+	100% { opacity: 0.4; transform: rotate(360deg); }
+}
+@keyframes orbit-counter-clock-wise {
+	from { transform: rotate(360deg); } to { transform: rotate(0deg); }
+}
+
+@media screen and (max-width: 1000px){
+    .top .nav ul li{
+        display: inline-block;
+        line-height: 50px;
+        margin: 0 10px;
+        font-weight: bolder;
+    }
+    
+    .top .nav .dis{
+        margin-right: 30px;
+    }
+
+    .top h2{
+        margin-left: 30px;
+        user-select: none;
+        font-size: 25px;
+    }
+    
+    .top h2::after{
+        content: "WEB DEVELOPER";
+        color: #adabab;
+        font-size: 8px;
+        margin-left: 5px;
+    }
+    
+    .top .nav ul li a{
+        color: #ffffff;
+        font-size: 12px;
+        padding: 7px 10px;
+        border-radius: 2px;
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .top .nav{
+        display: none;
+    }
+}
