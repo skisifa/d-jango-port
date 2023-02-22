@@ -7,7 +7,10 @@
     list-style-type: none;
 }
 
-
+p {
+    font-size: 20px;
+    color: #d4d3d3;
+}
 
 ::selection{
     color: #000;
@@ -23,6 +26,9 @@ body{
     background-size: cover;
 }
 
+.men{
+    display: none;
+}
 
 /* top */
 .top{
@@ -49,10 +55,6 @@ body{
     margin-left: 5px;
 }
 
-.top .nav ul{
-    float: right;
-}
-
 .top .nav ul li{
     display: inline-block;
     line-height: 80px;
@@ -71,9 +73,11 @@ body{
     text-transform: uppercase;
 }
 
-a.active,a:hover{
-    background: #7f07ffa6;
-    transition: .5s;
+.nav ul li a.active,.nav ul li a:hover{
+    color: #cd07ff;
+    font-size: 20px;
+    transition: .5s;   
+
 }
 
 /* mid */
@@ -87,11 +91,6 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.mid .all{
-    background-color: #00000076;
-    padding: 0px 20px 20px 20px;
 }
 
 .intro-message   { 
@@ -111,19 +110,34 @@ form{
 /*Big header*/
 .intro-message > h1 {
     text-shadow: 2px 1px 2px #000;
-    font-size: 4.5em;
+    font-size: 4em;
     color: rgba(255, 255, 255, 0.961);
     margin-bottom: 5px;
 }
 
 /*small header*/
-.intro-message > h3 {
-    color: white;
-    font-weight: 100;
-    font-size: 15.4px;
+.intro-message h3{
     margin-top: 10px;
+}
+
+.intro-message > h3 .holder{
+    color: white;
+    font-size: 15.4px;
     font-family: "Raleway", sans-serif !important;
 }
+
+@keyframes cursor-blink {
+    0% {
+      opacity: 0;
+    }
+  }
+  
+.intro-message h3::after {
+    content: "|";
+    color: #ffffff;
+    display: inline-block;
+    animation: cursor-blink 1.5s steps(2) infinite;
+  }
 
 .mid .content1{
     display: flex;
@@ -162,6 +176,149 @@ form{
         color: #e6e5e5;
         width: 550px;
         padding-bottom: 20px;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .men{
+        display: block;
+    }
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+    @keyframes checked-anim {
+        50% {
+            width: 3000px;
+            height: 3000px;
+        }
+        100% {
+            width: 100%;
+            height: 100%;
+            border-radius: 0;
+        }
+    }
+    @keyframes not-checked-anim {
+        0% {
+            width: 3000px;
+            height: 3000px;
+        }
+    }
+
+    .men ul li a.active,.men ul li a:hover{
+        color: #cd07ff;
+        padding:  10px 0px 10px 5px;
+        font-size: 20px;
+        transition: .5s;   
+    
+    }
+    .men li, a {
+        margin: 75px 0 -55px 0;
+        color: #000000;
+        font: 14pt "Roboto", sans-serif;
+        font-weight: 700;
+        line-height: 1.8;
+        text-decoration: none;
+        text-transform: none;
+        list-style: none;
+        outline: 0;
+        display: none;
+    }
+    .men li {
+        width: 230px;
+        text-indent: 56px;
+    }
+    .men a:focus {
+        display: block;
+        color: #333;
+        background-color: #ffffff;
+        transition: all .5s;
+    }
+    .men h1 {
+        line-height: 0;
+        font-size: 4vw;
+        font-weight: 700;
+    }
+    .men h3 {
+        float: right;
+        line-height: .3;
+        font-size: 2.5vw;
+        font-weight: lighter;
+    }
+    .men h4 {
+        float: left;
+        margin-left: -2%;
+        font-size: 1.5vw;
+        font-weight: lighter;
+    }
+    
+
+    
+    #trigger, #burger, #burger:before, #burger:after {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        background: #000000;
+        width: 30px;
+        height: 5px;
+        transition: .2s ease;
+        cursor: pointer;
+        z-index: 1;
+    }
+    #trigger {
+        height: 25px;
+        background: none;
+    }
+    #burger:before {
+        content: " ";
+        top: 10px;
+        right: 0;
+    }
+    #burger:after {
+        content: " ";
+        top: 20px;
+        right: 0;
+    }
+    #menu-toggle:checked + #trigger + #burger {
+        top: 35px;
+        transform: rotate(180deg);
+        transition: transform .2s ease;
+    }
+    
+    #menu-toggle:checked + #trigger + #burger:before {
+        width: 20px;
+        top: -2px;
+        left: 18px;
+        transform: rotate(45deg) translateX(-5px);
+        transition: transform .2s ease;
+    }
+    #menu-toggle:checked + #trigger + #burger:after {
+        width: 20px;
+        top: 2px;
+        left: 18px;
+        transform: rotate(-45deg) translateX(-5px);
+        transition: transform .2s ease;
+    }
+    #menu {
+        position: absolute;
+        margin: 0; padding: 0;
+        width: 100px;
+        height: 100px;
+        background-color: #ffffff;
+        border-bottom-left-radius: 100%;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+        animation: not-checked-anim .2s both;
+        transition: .2s;
+        right: 0;
+    }
+    #menu-toggle:checked + #trigger + #burger + #menu {
+        animation: checked-anim 1s ease both;
+    }
+    #menu-toggle:checked + #trigger ~ #menu > li, a {
+        display: block;
+    }
+    [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        display: none;
     }
     
 }
@@ -222,7 +379,7 @@ hr.intro-divider {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #03092b00;
+	background: #000000ac;
 	-webkit-transition: background 0.8s ease-out;
 	-moz-transition: background 0.8s ease-out;
 	-o-transition: background 0.8s ease-out;
