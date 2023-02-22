@@ -25,7 +25,7 @@ export default function Home() {
                 <li><a href="#">STUDIO</a></li>
                 <li><a class="git" href="https://github.com/Wet-Django"target="_blank">GITHUB</a></li>
                 <li><a class="" href="https://discord.com/users/DJANGO†#4565" target="_blank">DISCORD</a></li>
-                <li><a class="dis" href="https://www.instagram.com/horny_django/">INSTAGRAM</a></li>
+                <li><a class="dis" href="https://www.instagram.com/horny_django/" target="_blank">INSTAGRAM</a></li>
             </ul>
         </div>
     </div>
