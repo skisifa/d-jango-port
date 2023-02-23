@@ -117,8 +117,9 @@ form{
 
 /*small header*/
 .intro-message h3{
+    height: 10px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .intro-message > h3 .holder{

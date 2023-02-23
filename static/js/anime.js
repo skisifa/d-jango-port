@@ -2,7 +2,17 @@
     
 // });
 
-console.log("Vanila JS!!!");
+console.log("I'm Watching You Playing Here!");
+
+let list_letters = [
+    "Instagram: @Horny_Django",
+    "SexMex ForLife",
+    "おれだって海賊になりたいんだよ！",
+    "I AM A GOOD Developer!",
+    "WEB DESIGNER + FRONT-END DEVELOPER.",
+    "Gho9 Gho9 3000"
+];
+
 let letter = "WEB DESIGNER + FRONT-END DEVELOPER.";
 
 let typer = document.getElementById("typer");
@@ -19,6 +29,7 @@ setInterval(function(){
         if (timer == 0) {
             counter=0;
             typer.innerHTML="";
+            letter = list_letters[rn(0,list_letters.length-1)];
             timer = (letter.length+1)*2;
         }
     }
@@ -37,7 +48,11 @@ setInterval(function(){
 // typing("nadi skisifa");
 
 
-
+function rn(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 
 
