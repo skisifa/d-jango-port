@@ -76,7 +76,7 @@ body{
 .nav ul li a.active,.nav ul li a:hover{
     color: #cd07ff;
     font-size: 20px;
-    transition: .5s;   
+    transition: .1s;   
 
 }
 
