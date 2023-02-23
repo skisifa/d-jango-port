@@ -47,8 +47,8 @@ export default function Home() {
                     <div class="intro-message">
                         <img src="./img/684058_JY7OnqEA.png" alt=""/>
                         <h1 style="color:white">OUSSAMA <span style="color:#FF6363">/</span> KAOUKAB</h1>
-                          <hr class="intro-divider"/>
                           <h3 id="typer"></h3>  
+                          <hr class="intro-divider"/>
                     </div>
                     <div class="content1">
                         <h1>ABOUT ME</h1>
